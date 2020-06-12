@@ -1,0 +1,14 @@
+# Step 1: Import the dependencies
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+
+# Step 2: create a do-while loop to ensure the user inputs an integer between 1 and 8
+int n;
+do
+{
+    n = get_int("Please input a number between 1 and 8: ");
+}
+while (n < 1 || n > 8);
+
