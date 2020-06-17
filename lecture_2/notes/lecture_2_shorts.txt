@@ -1,0 +1,70 @@
+1) Functions
+
+- black box naming --> we dont necessarily care about what happens under the hood, just as long as the output is correct
+- Why use functions?
+    - organization
+    - simplifications --> able to debug alot easier and explain to someone else
+    - Resuable --> can be transfered cross functionally
+- Function Declarations
+    - best to declare a function right before the main portion of your code
+    - Parts to a function declaration
+        - return-type name (argument-list)
+            - return-type (char, int, etc.)
+            - the name you want to give the function
+            - argument-list --> comma separated set of inputs for your function (a list)
+        Example: int add_two_ints(int a, int b)
+        Example: int multiply_two_floats(float a, float b)
+- Function Definitions
+    - This is the behavior of a function
+    - The first part of a function Definition is almost similar to the function declaration
+        - float mult_two_reals(float x, float y)
+    - Then the body of the function is encased in {}
+        - {return x*y}
+    Example:
+        - int add_two_ints(int a, int b)
+        - { return a + b}
+- Function Calls
+    - Pass arguments and assign its return value to something of the correct type
+    - Declare = int add_two_ints(int a, int b)
+    - Define = {return a + b}
+    - Call = int z = add_two_ints(14, 30)
+- Function Miscellany
+    - functions that dont take inputs are 'void'
+
+2) Arrays
+
+- Fundamental data structure
+- holds values of the same type at contgiuous memory locations
+- In most languages, arrays start at index 0
+- Declaring Arrays
+    - type name[size] --> Example int shoe_sizes[4]
+    - changing or declaring a specific element in the array --> name[index] == value --> truthtable[2] = false (changes 3rd element to false)
+    - to fill an array --> type name[size] = { value1, value2, value3 }
+    - Fill an array using a loop is best practice
+    - Indicating the SIZE OF AN ARRAY is not always necessary, you can declare an array without a size []
+    - PRACTICE PROBLEM
+        - The code will return --> 10 22
+
+
+3) Command Line Arguments
+
+- int main void {}
+- to collect command-line arguments --> int main(int argc, string argv[])
+    - These major arguments will let you know what data was provided and how much data was collected
+    - argc --> integer type variable will store the number of command-line arguments
+        - ./greedy --> argc = 1
+        - ./greedy 1024 cs50 --> argc = 3
+    - argv[] --> array of strings, the text that was typed by the user
+
+
+
+4) Variable Scope
+
+- Local variables --> accessed in the the function they are created
+    - int main void will not know what 'x' in a separate function like int triple(x)
+- Global variables --> accessed by any function in the program
+    - you need to declare this variable outside of function first before calling them inside functions
+        Example: float global = 0.5050
+    - PRACTICE PROBLEM:
+        - answer --> x is 1, y is 2
+
