@@ -3,12 +3,12 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 
 ### Lecture 0: Scratch
 | Category | Name | Documentation | Language |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | Assignment | [100 Seconds in Space](https://scratch.mit.edu/projects/400619243/) | [Documentation](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_0/100%20Seconds%20in%20Space.sb3) | Scratch |
 
 ### Lecture 1: C Programming Language
 | Category | Name | | Language | Grade |
-| ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |
 | Assignment | [Hello.c](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/hello/hello.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_hello/submission.png) |
 | Assignment | [Cash.c](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/cash/cash.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_cash/submission.png) |
 | Assignment | [Credit.c](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/credit/credit.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_credit/submission.png) |
