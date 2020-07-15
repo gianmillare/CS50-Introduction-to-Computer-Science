@@ -36,6 +36,12 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Category | Name | Language | Grade |
 | ------------- | ------------- | ------------- | ------------- |
 | Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/notes/lecture_4.txt) [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/notes/lecture_4.c) | C Language | N/A |
-| Assignment | [Filter - Part 1](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_1/helpers.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_1/submission.png) |
-| Assignment | [Filter - Part 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_2/helpers.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_2/submission.png) |
-| Assignment | [Recover](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/recover/recover.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_recover/submission.png) |
+| Assignment | [Filter - Part 1](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_1/helpers.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_1/submission.png) |
+| Assignment | [Filter - Part 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_2/helpers.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_2/submission.png) |
+| Assignment | [Recover](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/recover/recover.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_recover/submission.png) |
+
+### Lecture 5: Data Structures
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/notes/lecture_5.c) | C Language | N/A |
+| Assignment | [Speller](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/speller/dictionary.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/results/check50_speller/submission.png) |
