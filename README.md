@@ -14,3 +14,12 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Credit.c](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/credit/credit.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_credit/submission.png) |
 | Assignment | [Mario.c (Beginner)](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/mario/mario.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_mario1/submission.png) |
 | Assignment | [Mario.c (Advanced)](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/pset1/mario2/mario_pro.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_1/results/check50_mario2/submission.png) |
+
+
+### Lecture 2: Arrays
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/notes/lecture_2_shorts.txt) [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/notes/lecture_2.c) | C Language | N/A |
+| Assignment | [Readability](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/readability/readability.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_readability/submission.png) |
+| Assignment | [Caesar](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/caesar/caesar.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_caesar/submission.png) |
+| Assignment | [Substitution](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/substitution/substitution.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_substitution/submission.png) |
