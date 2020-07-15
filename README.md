@@ -23,3 +23,11 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Readability](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/readability/readability.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_readability/submission.png) |
 | Assignment | [Caesar](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/caesar/caesar.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_caesar/submission.png) |
 | Assignment | [Substitution](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/substitution/substitution.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_2/results/check50_substitution/submission.png) |
+
+### Lecture 3: Algorithms
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/notes/lecture_3.txt) [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/notes/lecture_3.c) | C Language | N/A |
+| Assignment | [Plurality](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/plurality/plurality.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_plurality/submission.jpg) |
+| Assignment | [Runoff](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/runoff/runoff.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_runoff/submission.png) |
+| Assignment | [Tideman](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/tideman/tideman.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_tideman/submission.png) |
