@@ -31,3 +31,11 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Plurality](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/plurality/plurality.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_plurality/submission.jpg) |
 | Assignment | [Runoff](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/runoff/runoff.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_runoff/submission.png) |
 | Assignment | [Tideman](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/tideman/tideman.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_3/results/check50_tideman/submission.png) |
+
+### Lecture 4: Memory
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/notes/lecture_4.txt) [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/notes/lecture_4.c) | C Language | N/A |
+| Assignment | [Filter - Part 1](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_1/helpers.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_1/submission.png) |
+| Assignment | [Filter - Part 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/filter_part_2/helpers.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_filter_2/submission.png) |
+| Assignment | [Recover](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/recover/recover.c) | C Language | [Submission Details](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_4/results/check50_recover/submission.png) |
