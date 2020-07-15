@@ -45,3 +45,15 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | ------------- | ------------- | ------------- | ------------- |
 | Notes | [.C File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/notes/lecture_5.c) | C Language | N/A |
 | Assignment | [Speller](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/speller/dictionary.c) | C Language | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_5/results/check50_speller/submission.png) |
+
+
+### Lecture 6: Python
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [Python File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/notes/lecture_6.py) | Python | N/A |
+| Assignment | [Hello](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/hello/hello.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_hello/submission.png) |
+| Assignment | [Mario Part 1](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/mario1/mario.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_mario1/submission.png) |
+| Assignment | [Mario Part 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/mario2/mario.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_mario2/submission.png) |
+| Assignment | [Cash](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/cash/cash.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_cash/submission.png) |
+| Assignment | [Credit](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/credit/credit.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_credit/submission.png) |
+| Assignment | [Readability](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/readability/readability.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_readability/submission.png) |
