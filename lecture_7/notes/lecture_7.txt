@@ -1,0 +1,235 @@
+Lecture 7: SQL
+
+Part 1: Introduction and Tips
+- A good way to get user data is via Google Form --> Google Sheets (Research this)
+- Before moving into a SQL IDE or analyzing with SQL, it is best to download the filed as a CSV
+- Python tricks with CSV: Creating a dictionary using key and value_count
+
+    import csv
+
+        counts = {}
+
+        with open(filename.csv) as csv_file:
+            reader = csv.DictReader(csv_file)
+
+            for row in reader:
+                title = row["title"]
+                if title in counts:
+                    counts[title] += 1
+                else:
+                    counts[title] = 1
+
+    ----> using lambda in the "key" below how you can sort a dictionary by value rather than key
+        ---> lambda (input): (output)
+    for title, count in sorted(counts.items(), key=lambda item: item[1], reverse=True): --> reverse=True to "flip" the sorting of a list/dictionary
+        print(title, count, sep=" | ")
+
+
+
+
+
+
+
+Part 2: Using SQL in the Terminal
+
+    - Step 1: sqlite3 db_name.db
+    - Step 2: import "filename.csv" table_name
+
+    - most common SQL code --> SELECT * FROM table_name
+    - example: SELECT title, COUNT(title) FROM favorites GROUP BY title LIMIT 10;
+
+    - remember that SQL is a relational database --> faster than coding csv files into a programming language
+
+
+Part 3: CRUD --> SQL & SQL Syntax
+- Create --> INSERT
+- Read --> SELECT
+- Update --> UPDATE
+- Delete --> DELETE
+
+    Syntax Notes
+    - BLOB
+        - binary large option
+    - INTEGER
+        - smallint
+        - integer
+        - bigint
+    - NUMERIC
+        - boolean
+        - date
+        - datetime
+        - numeric(scale, precision)
+        - time
+        - timestamp
+    - REAL
+        - real
+        - double precision
+    - TEXT --> specify the number of characters needed in each cell with (n)
+        - char(n)
+        - varchar(n)
+        - text
+
+    TIP: --> use "%" as a wildcard to indicate "anything before and after can be anything"
+    - Example: SELECT title FROM favorites WHERE title LIKE "%office%"
+
+
+
+
+
+
+Part 4: GOLDEN GUIDELINES
+
+- Other notable functions --> AVG, COUNT, DISTINCT, MAX, MIN
+- MORE notable functions --> WHERE, LIKE, LIMIT, GROUP BY, ORDER BY, JOIN
+
+- To add columns and values --> INSERT INTO table (column, ...) VALUES (value,...)
+- To see all columns in a table --> SELECT columns FROM table;
+- To see columns with specific trait --> SELECT columns FROM table WHERE condition;
+- To change names or values in a table --> UPDATE table SET column=value WHERE condition;
+    --> Example: UPDATE favorites SET title = "The Office" WHERE title LIKE "%office%";
+            ---> SELECT title FROM favorites
+- To delete a column or value --> DELETE FROM table WHERE condition
+    --> Example: DELETE FROM favorites WHERE title = "Friends"
+
+
+
+
+Part 5: SQL and IMDB
+
+- Download the set from IMDB --> title.basics.tsv.gz
+- tconst ==> identifier for the movie --> tt1435814545
+- titleType --> type of show --> tv Series
+- PrimaryTitle --> title --> The Crown
+- startYear --> timedate stamp --> 2016
+- genres --> genre of movie or show --> Drama, suspense
+
+
+
+Part 6: using Python to write a csv file from a tsv file
+
+Step 1: in terminal --> navigate to folder holding the tsv file
+Step 2: vim filename.tsv --> This will show the file contents
+Step 3: create a new python file and name it accordingly
+Step 4: vim filename.py
+Step 5: Review the below code, input into vim
+
+import csv
+
+with open("filename.tsv", "r") as prototype1:
+    reader = csv.DictReader(titles, delimiter="\t")             -----> delimiter can be changed to any sign that is separating the values
+
+    with open("filename.csv", "w") as prototype2:               -----> this will create a new file which you will "write" to
+    writer = csv.writer(shows)
+    writer.writerow(["column1", "column2", "column3", "column4"]) ---> This will write in the header rows where column is name of header
+
+    # START WRITING IN ROWS BASED ON CONDITIONS YOU WANT IN THE NEW FILE, EXAMPLE:
+    for row in reader:
+        if row["startYear"] != "\\N":
+            year = int(row["startYear"])
+
+            if year >= 1970:
+
+                if row["titleType"] == "tvSeries" and row["isAdult"] == "0":
+                    writer.writerow([row["tconst"], row["primaryTitle"], row["startYear"], row["genres"]])
+
+Step 6: vim filename.csv   ----> view the new file written
+
+
+
+
+
+
+
+Part 7: Python and SQL databases
+
+### How to use sqlite database to store csv file values
+
+Step 1: create a new file in python
+Step 2: vim filename.py
+Step 3: follow the below coding example
+
+import cs50
+import csv
+
+open("shows3.db", "w").close()              -----> this creates a new filename.db
+
+db = cs50.SQL("sqlite:///shows3.db")
+
+db.execute("CREATE TABLE shows (tconst TEXT, primaryTitle TEXT, startYear NUMERIC, genres TEXT)")
+
+with open("title.basics.tsv", "r") as titles:
+    reader = csv.DictReader(titles, delimiter="\t")
+
+    for row in reader:
+
+        if row["titleType"] == "tvSeries" and row["isAdult"] == "0":
+            if row["startYear"] != "\\N":
+                startYear = int(row["startYear"])
+
+                if startYear >= 1970:
+                    tconst = row["tconst"]
+                    genres = row["genres"]
+                    primaryTitle = row["primaryTitle"]
+
+                    db.execute("INSERT INTO shows (tconst, primaryTitle, startYear, genres) VALUES(?, ?, ?, ?)",
+                        tconst, primaryTitle, startYear, genres)                        ------> these coincide with the question marks above
+
+Step 4: save the file and run the python file via python filename.py
+Step 5: sqlite3 filename.db
+
+***Tip: Combining tables for accurate filtering
+----> SELECT * FROM shows WHERE id in (SELECT show_id FROM genres WHERE genre = "Comedy") AND year = 2019;
+
+
+
+
+Part 8: Joins and Nested Queries
+
+JOIN ==> SELECT * FROM table1 JOIN table2 ON table1.common_column = table2.common_column;
+JOINS Example ==> SELECT title FROM
+                  people JOIN stars ON people.id = stars.person_id JOIN
+                  shows ON stars.show_id = shows.id
+                  WHERE name = "Ellen Degeneres"
+
+Sub Queries ==> SELECT * FROM table1 WHERE column1 IN (SELECT column2 FROM table2 WHERE column3 = (SELECT column4 FROM table3 WHERE column5 = 'some condition'))
+
+USAGE ==> SELECT * FROM table1 JOIN table2 ON table1.common_column = table2.common_column WHERE condition;
+                ----> condition example: WHERE title = "The Office" AND year = 2005;
+
+
+
+
+
+
+
+Part 9: Primary Keys, Foreign Keys, Unique, and Index
+
+Example: -----> speeding up the database speed from the example above
+
+CREATE INDEX person_index ON stars(person_id);
+CREATE INDEX show_index ON stars(show_id);
+CREATE INDEX name)index ON people(name);
+
+SELECT title FROM
+people JOIN stars ON people.id = stars.person_id JOIN
+shows ON stars.show_id = shows.id
+WHERE name = "Ellen Degeneres"
+
+
+
+
+
+
+Part 10: SQL Shorts
+
+Primary key notes:
+- Increases speed of querying
+- best practice to identify a primary key when working with a table
+- think of an index as the very first column and unique to a value
+
+Four Operations used for SQL Database Querying
+- INSERT adds information to a table --> INSERT INTO table (columns) VALUES (values) --> Example: INSERT INTO users (username, password) VALUES (gianmillare, hello123)
+- SELECT extracts information from a table --> SELECT columns FROM table WHERE condition ORDER BY column DESC
+        ------> joining -----> SELECT columns FROM table1 JOIN table2 ON table1.common = table2.common
+- UPDATE modify information in a table ---> UPDATE table SET column = value WHERE condition
+- DELETE remvoe information from a table ---> DELETE FROM table WHERE condition
