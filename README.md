@@ -58,3 +58,8 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Credit](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/credit/credit.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_credit/submission.png) |
 | Assignment | [Readability](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/readability/readability.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_readability/submission.png) |
 | Assignment | [DNA](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/dna/dna.py) | Python | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_6/results/check50_dna/submission.png) |
+
+### Lecture 7: SQL
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/notes/lecture_7.txt) | SQL | N/A |
