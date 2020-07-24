@@ -63,3 +63,11 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Category | Name | Language | Grade |
 | ------------- | ------------- | ------------- | ------------- |
 | Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/notes/lecture_7.txt) | SQL | N/A |
+| Assignment | [Question 1](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/1.sql) | SQL | 1/1 |
+| Assignment | [Question 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/2.sql) | SQL | 1/1 |
+| Assignment | [Question 3](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/3.sql) | SQL | 1/1 |
+| Assignment | [Question 4](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/4.sql) | SQL | 1/1 |
+| Assignment | [Question 5](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/5.sql) | SQL | 1/1 |
+| Assignment | [Question 6](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/6.sql) | SQL | 1/1 |
+| Assignment | [Question 7](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/7.sql) | SQL | 1/1 |
+| Assignment | [Question 8](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/8.sql) | SQL | 1/1 |
