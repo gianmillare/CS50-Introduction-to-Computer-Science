@@ -71,3 +71,7 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Question 6](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/6.sql) | SQL | 1/1 |
 | Assignment | [Question 7](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/7.sql) | SQL | 1/1 |
 | Assignment | [Question 8](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/8.sql) | SQL | 1/1 |
+| Assignment | [Question 9](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/9.sql) | SQL | 1/1 |
+| Assignment | [Question 10](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/10.sql) | SQL | 1/1 |
+| Assignment | [Question 11](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/11.sql) | SQL | 1/1 |
+| Assignment | [Question 12](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/12.sql) | SQL | 1/1 |
