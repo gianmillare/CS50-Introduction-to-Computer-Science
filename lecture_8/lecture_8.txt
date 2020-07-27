@@ -1,0 +1,75 @@
+Lecture 8: Information ==> Algorithmic Precision
+
+Part 1: Computer Science is Problem Solving
+- Ways to solve problems --> using numbers, letters, binary
+- Algorithms are steps to solve the problem. Programming is the use of algorithms to produce a language that a computer can understand.
+
+
+
+
+
+Part 2: Precision and Correctness
+- instructions can come in different forms like abstractions, step by step, shapes
+- the same applies to instructing a computer to execute a method
+    - this is equivalent of verbal instructions to programming
+
+
+
+
+Part 3: Information
+- input --> algorithms --> output
+- think about whether you should instruct the computer to do something or not
+    - data is information, and with this power, responsibility comes into question
+    - for example --> passwords
+
+
+
+
+
+Part 4: pin.py --> hacking into someones account using computer programming to discover someones pin
+
+    for i in range(0000, 100000):
+        print(f"I am checking {i:04}....)"
+
+- programmers are able to decide whether to use their coding skills for good or bad
+
+
+
+
+
+Part 5: password.py
+
+from time import sleep
+
+with open("large", "r") as file:
+    for word in file.readlines():
+    print(f"Checking {word.rstrip}...")
+    sleep(.1)
+
+
+
+
+Part 6: Cookies and Developer Tools
+- cookies are not a bad thing as it speeds up and provides information to personal data
+- but this can also be a vulernability. Websites can use cookies to target users with advertisements and (malevolent) computer programmers
+
+
+
+
+
+
+Part 7: Snapchat and SQL
+- Soft delete vs hard delete
+- Soft deletion can still be leaked out
+- hard deletion is what we hope Snapchat uses
+- which one does Snapchat use?
+- the notion of "unsending" does not exist
+
+
+
+
+Part 8: Final Project --> Tracks
+
+- Web Programming --> HTML, CSS, JS, Python, and SQL --> CS50 Finance website, buying stocks using virtual dollars using a SQL database
+- Mobile app development --> iOS Swift or Android Java --> Creating a pokedex, instagram using filters, note taker app
+- game development --> Lua --> creating Pong
