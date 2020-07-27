@@ -77,3 +77,8 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Assignment | [Movies - Question 12](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/12.sql) | SQL | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/results/check50_movies/submission.png) |
 | Assignment | [Movies - Question 13](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/movies/13.sql) | SQL | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/results/check50_movies/submission.png) |
 | Assignment | [Houses (Create Database)](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/houses/import.py) - [Houses (Query Solution)](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/houses/roster.py) | Python & SQL | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_7/results/check50_houses/submission.png) |
+
+### Lecture 8: Information ==> Algorithmic Precision
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_8/lecture_8.txt) | N/A | N/A |
