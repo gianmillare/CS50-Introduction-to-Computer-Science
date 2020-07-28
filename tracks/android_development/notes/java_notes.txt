@@ -1,0 +1,125 @@
+Java Notes
+
+Data types:
+- boolean
+- double, float
+- char 
+- int
+- List
+- Map
+- Strings
+
+Examples: Data Types
+	- String title = “CS50”;
+	- int count = 50;
+	- count += 5;
+
+Examples: Conditions
+	String title = “iOS”;
+	if (title.equals(“iOS”)) {
+		System.out.println(“Good choice”);
+	}
+	else {
+		System.outprintln(“Maybe next time”);
+	}
+
+Examples: Arrays
+	int[] values = new int[]{ 1, 2, 3 };        —> this is how you assign values to an array
+	for (int I = 0; I < values.length; i++) {
+		System.out.println(i);
+	}
+
+Examples: Lists
+	List<String> values = new ArrayList<>();     —> this is how you create the list
+	values.add(“one”);				   —> this is how to add elements into an list
+	values.add(“two”);
+	for (String value : values) {			    —> similar to iterations in javascript/C
+		System.out.println(value);
+	}
+
+
+Examples: Generics
+—> List<String> strings = new ArrayList<>();
+—> List<Integer> integers = new ArrayList<>();
+
+
+Examples: Maps
+	Map<String, String> airports = new HashMaps<>();
+	airports.put(“SFO”, “San Francisco”);
+	airports.put(“BOS”, “Boston”);
+	for (Map.Entry<String, String> e : airports.entrySet()) {
+		System.out.println(e.getKey() + “: “ + e.getValue());
+	}
+
+Examples: Classes
+
+	public class Person {
+		String name;
+		Person(String name) {
+			this.name = name;
+		}
+	}
+	Person person = new Person(“Tommy”)
+
+Examples: Methods —> specific instructions inside class that provide some sort of output
+
+	public class Person {
+		String name;
+		Person(String name) {
+			this.name = name;
+		}
+		
+		public void sayHello() {
+			System.out.println(“I’m “ + name);
+		}
+	}
+	Person person = new Person(“Tommy”);
+	person.sayHello();
+
+Examples: Static Methods
+
+	public class Person {
+		…
+		public static void wave() {
+			System.out.println(“Wave”);
+		}
+	}
+	Person.wave();
+
+Examples: Inheritance —> creating a new class that can “copy” the functions of another class to add features
+	
+	public class Vehicle {
+		public int wheels() {
+			return 4;
+		}
+		public void go() {
+			System.out.println(“zoom!”);
+		}
+	}
+
+
+
+	INHERITANCE
+	
+	public class Motorcycle extends Vehicle {             —> This class inherits from a “super”class
+		@Override
+		public int wheels() {
+			return 2;
+		}
+	}
+
+
+Examples: Interfaces
+	Public interface Teacher {
+		public void teach():
+	}
+
+	USING THE INTERFACE
+
+	public classy CS50Teacher implements Teacher {
+		@Override
+		public void teach() {
+			…
+		}
+	}
+
