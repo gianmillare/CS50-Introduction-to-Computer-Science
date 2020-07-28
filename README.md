@@ -82,3 +82,9 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Category | Name | Language | Grade |
 | ------------- | ------------- | ------------- | ------------- |
 | Notes | [TXT File - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/lecture_8/lecture_8.txt) | N/A | N/A |
+
+### Tracks: Android Development
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [Android Development](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/android_dev_notes.txt) | Java | N/A |
+| Notes | [Java Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/java_notes.txt) | Java | N/A |
