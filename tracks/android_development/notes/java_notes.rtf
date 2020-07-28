@@ -1,0 +1,133 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11820\viewh9940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Java Notes\
+\
+Data types:\
+- boolean\
+- double, float\
+- char \
+- int\
+- List\
+- Map\
+- Strings\
+\
+Examples: Data Types\
+	- String title = \'93CS50\'94;\
+	- int count = 50;\
+	- count += 5;\
+\
+Examples: Conditions\
+	String title = \'93iOS\'94;\
+	if (title.equals(\'93iOS\'94)) \{\
+		System.out.println(\'93Good choice\'94);\
+	\}\
+	else \{\
+		System.outprintln(\'93Maybe next time\'94);\
+	\}\
+\
+Examples: Arrays\
+	int[] values = new int[]\{ 1, 2, 3 \};        \'97> this is how you assign values to an array\
+	for (int I = 0; I < values.length; i++) \{\
+		System.out.println(i);\
+	\}\
+\
+Examples: Lists\
+	List<String> values = new ArrayList<>();     \'97> this is how you create the list\
+	values.add(\'93one\'94);				   \'97> this is how to add elements into an list\
+	values.add(\'93two\'94);\
+	for (String value : values) \{			    \'97> similar to iterations in javascript/C\
+		System.out.println(value);\
+	\}\
+\
+\
+Examples: Generics\
+\'97> List<String> strings = new ArrayList<>();\
+\'97> List<Integer> integers = new ArrayList<>();\
+\
+\
+Examples: Maps\
+	Map<String, String> airports = new HashMaps<>();\
+	airports.put(\'93SFO\'94, \'93San Francisco\'94);\
+	airports.put(\'93BOS\'94, \'93Boston\'94);\
+	for (Map.Entry<String, String> e : airports.entrySet()) \{\
+		System.out.println(e.getKey() + \'93: \'93 + e.getValue());\
+	\}\
+\
+Examples: Classes\
+\
+	public class Person \{\
+		String name;\
+		Person(String name) \{\
+			this.name = name;\
+		\}\
+	\}\
+	Person person = new Person(\'93Tommy\'94)\
+\
+Examples: Methods \'97> specific instructions inside class that provide some sort of output\
+\
+	public class Person \{\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 		String name;\
+		Person(String name) \{\
+			this.name = name;\
+		\}\
+		\
+		public void sayHello() \{\
+			System.out.println(\'93I\'92m \'93 + name);\
+		\}\
+	\}\
+	Person person = new Person(\'93Tommy\'94);\
+	person.sayHello();\
+\
+Examples: Static Methods\
+\
+	public class Person \{\
+		\'85\
+		public static void wave() \{\
+			System.out.println(\'93Wave\'94);\
+		\}\
+	\}\
+	Person.wave();\
+\
+Examples: Inheritance \'97> creating a new class that can \'93copy\'94 the functions of another class to add features\
+	\
+	public class Vehicle \{\
+		public int wheels() \{\
+			return 4;\
+		\}\
+		public void go() \{\
+			System.out.println(\'93zoom!\'94);\
+		\}\
+	\}\
+\
+\
+\
+	INHERITANCE\
+	\
+	public class Motorcycle extends Vehicle \{             \'97> This class inherits from a \'93super\'94class\
+		@Override\
+		public int wheels() \{\
+			return 2;\
+		\}\
+	\}\
+\
+\
+Examples: Interfaces\
+	Public interface Teacher \{\
+		public void teach():\
+	\}\
+\
+	USING THE INTERFACE\
+\
+	public classy CS50Teacher implements Teacher \{\
+		@Override\
+		public void teach() \{\
+			\'85\
+		\}\
+	\}\
+}
