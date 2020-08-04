@@ -1,0 +1,96 @@
+CS50 Tracks: Android Development
+
+1) Open Android Development
+	- Empty Activity —> Create new project
+	- Name —> camel-case
+	- Package name —> reverses domain name (i.e. io.gianmillare.androiddevexample)
+	- Location —> Choose where you want to save your project
+	- Language —> Kotlin vs Java
+	- Minimum SDK —> the availability of the version of Android  (recommended Android 5.0)
+
+2) Create an AVD (Android Virtual Device)
+	- Click AVD manager at the top right
+	- Click Create virtual device on the bottom
+	- Select the phone type (i.e. Pixel 3a)
+	- Select version (i.e. try a more recent version of Android)
+	- click finish
+
+3) Folder called "Java"
+- this contains that package created in Step 1
+- locate MainActivity file, Open
+- under the last line under "Override" --> where you input code
+
+------------ Notes focused on Sorting App -----------------
+
+- control click the package under Folder "Java"
+- create new Java Class --> "track"
+- click ok --> "Track" should be under MainActivity
+- in the public class, create public variables. 
+	- public String name;
+	- public String instructor;
+- create a function that takes in both variables above and saves them
+	Track(String name, String instructor) {
+		this.name = name;
+		this.instrcutor = instructor;
+	}
+
+- create a list of tracks
+	- go to MainActivity
+	- create a List (when making the list, ensure that android studio imports the appropriate package)
+		- import java.utils.List
+	- when making the list, android studio should also import arraylist
+
+	List<Track> tracks = new ArrayList<>();
+
+	--> this creates a list called "tracks" in the Track class
+
+- add tracks into the newly created list. Make sure you include variables needed to fulfill the function ("Track")
+
+	tracks.add(new Track("xxxxx", "xxxxx")); 				--> Android studio will autopopulate the needed arguments
+
+- create another List called students
+- add in students using a shorthand technique below:
+
+	List<String> students = Arrays.asList("name1", "name1", "name3");
+
+- Create a map that will assign students to tracks
+	Map<key, value> assignments = new HashMap<>();
+
+- use a for loop to map each student to a track at RANDOM
+	Random random = new Random();
+	for (String student : students) {
+		int index = random.nextInt(tracks.size());
+		assignments.put(student, tracks.get(index)); 			---> This is how we "append" into the dictionary a student (key) and a random track(value)
+	}
+
+- iterate through the map to print out the results
+	for (Map.Entry<String, Track> entry : assignments.entrySet()) {
+		Log.d("cs50", "entry.getKey() + " got " + entry.getValue().name + " with " + entry.getValue().instructor);
+	}
+
+- top right, click the play button (or control + r)
+- bottom right of studio is "Logcat"
+- search for the output of the code to ensure that it worked
+
+- Getters and Setters
+	- create getters for the fields you created in the "Track" class
+
+	public String getName() {
+		return name;
+	}
+
+	public String getInstructor() {
+		return instructor;
+	}
+
+	- then set the previous "public String name" and "public String instructor" to:
+		private String name;
+		private String instructor;
+	
+	- doing this will require modifications to the MainActivity
+		- under the last for loop where you Log.d()
+
+			for (Map.Entry<String, Track> entry : assignments.entrySet()) {
+				Track track = entry.getValue();
+				Log.d("cs50", "entry.getKey() + " got " + track.getName() + " with " + track.getInstructor());
+		}

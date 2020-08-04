@@ -123,3 +123,8 @@ Examples: Interfaces
 		}
 	}
 
+Examples: Packages
+- Good way to place all functions and classes needed
+- similar to placing important documents into a folder
+- able to use across files
+- usage --> import java.util.'packagename'
