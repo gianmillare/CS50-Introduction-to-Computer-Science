@@ -86,5 +86,6 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 ### Tracks: Android Development
 | Category | Name | Language | Grade |
 | ------------- | ------------- | ------------- | ------------- |
-| Notes | [Android Development](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/android_dev_notes.txt) | Java | N/A |
-| Notes | [Java Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/java_notes.txt) | Java | N/A |
+| Notes | [Android Development](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_1/android_dev_notes.txt) | Java | N/A |
+| Notes | [Java Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_1/java_notes.txt) | Java | N/A |
+| Practice | [Android App - MainActivity](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_1/JavaExample/app/src/main/java/com/example/javaexample/MainActivity.java) [Android App - Tracks Class](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_1/JavaExample/app/src/main/java/com/example/javaexample/Track.java) | Java | N/A |
