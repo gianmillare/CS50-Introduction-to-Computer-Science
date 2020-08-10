@@ -1,0 +1,38 @@
+Lesson 2: PokeDex
+
+Starting an App
+1. Open Adroid Studio
+2. Empty Activity
+3. Name --> Name of App
+4. Package name --> domain name reversed
+5. Location --> create a folder
+6. Language --> Java
+7. Minimum API Level recommended Lollipop
+8. Finish
+
+----------------------------------------------------------
+
+Tip: Checkout layouts and views --> app -> res -> layout -> Activity
+    - best to keep layout width and height at "match_parent"
+    - best to keep text width and height at "wrap_content"
+
+----------------------------------------------------------
+
+Tip: What is a Gradle --> The build system for Android. The wrapper around the java compiler that holds code 
+    - most important --> dependencies section
+
+----------------------------------------------------------
+
+Recycler View --> Long list of Pokemon on the Screen
+1. Add recycler view to application.
+    - Gradle Scripts --> build.gradle (module app)
+    - under implementation 'androidx.constraintlayout:constraintlayout:1.1.3', make a new line
+    - input --> implementation 'androidx.recyclerview:recyclerview:1.0.0' (usually found in the documentation)
+    - click sync now --> ensure you get all green check marks
+
+----------------------------------------------------------
+
+Modifying the View
+1. Open activity_main.xml from res/layout --> click "split" at the top right
+2. remove text view with recycler view --> <recyclerview and then press tab
+ 
