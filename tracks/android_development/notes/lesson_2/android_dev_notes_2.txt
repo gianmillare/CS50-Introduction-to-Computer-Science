@@ -34,5 +34,149 @@ Recycler View --> Long list of Pokemon on the Screen
 
 Modifying the View
 1. Open activity_main.xml from res/layout --> click "split" at the top right
-2. remove text view with recycler view --> <recyclerview and then press tab
- 
+2. Right above <TextView  --> <recyclerview and then press tab
+3. In layout_width --> match_parent (to fill entire screen)
+4. In layout_height --> match_parent
+5. delete the entire text view
+6. Add an ID to the recycler view
+    - This is a unique identifier to access an object that represents this view
+    - under layout_height  --> "android:id="@+id/recycler_view"
+
+----------------------------------------------------------
+
+Define what each row will look like --> Second layout
+1. control click on layout
+2. new --> layout resource file
+3. file name --> pokedex_row
+4. LinearLayout
+5. click ok
+6. this will make a new xml file.
+7. Open the new XML file and match the below code:
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pokedex_row">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pokedex_row_text_view" />
+
+</LinearLayout>
+
+----------------------------------------------------------
+
+The Model 
+1. go back to app folder
+2. control click the top folder and create a new Java Class
+3. Create the classes that will be used in the app. For example:
+
+package io.gianmillare.pokedex;
+
+public class Pokemon {
+    private String name;
+    private int number;
+
+    Pokemon(String name, int number) {
+        this.name = name;
+        this.number = number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+}
+
+----------------------------------------------------------
+
+The Model part 2 (pokedexadapter)
+1. under app, control click to make another Java Class
+2. follow the below code exmaple:
+
+package io.gianmillare.pokedex;
+
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
+
+PLEASE NOTE: Some of the classes will appear "red" or grayed out because they will be create in a later step.
+public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokedexViewHolder> {
+    private static class PokedexViewHolder extends RecyclerView.ViewHolder {
+        public LinearLayout containerView;
+        public TextView textView;
+
+        PokedexViewHolder(View view) {
+            super(view);
+            containerView = view.findViewById(R.id.pokedex_row);
+            textView = view.findViewById(R.id.pokedex_row_text_view);
+        }
+    }
+}
+
+----------------------------------------------------------
+
+OnCreate 
+
+1. once you've created the above code, continue from below the PokedexViewHolder
+2. start by typing "oncreate" and tab. This will generate the below code. (delete "return null")
+
+    @NonNull
+    @Override
+    public PokedexViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return null;
+    }
+
+3. Follow the below code example:
+
+    @NonNull
+    @Override
+    public PokedexViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pokedex_row, parent, false);
+
+        return new PokedexViewHolder(view);
+    }
+
+----------------------------------------------------------
+
+OnBind
+
+1. underneath the oncreate, type onbind and press tab. The below code should formulate
+
+    @Override
+    public void onBindViewHolder(@NonNull PokedexViewHolder holder, int position) {
+
+    }
+
+2. Start creating data for the onbind view to display
+    - hard coding the data
+    - right above the oncreate view, start hard coding the data of Pokemon
+    - Example:
+
+        private List<Pokemon> pokemon = Arrays.asList(
+            new Pokemon("Bulbasaur", 1),
+            new Pokemon("Ivysaur", 2),
+            new Pokemon("Venasaur", 3)
+    );
+
+PLEASE NOTE: we will learn how to import data in a seprate lesson. This is just how to hard code the data
+
+3. return to the onbind code
+4. follow the below code as an example:
+
+    @Override
+    public void onBindViewHolder(@NonNull PokedexViewHolder holder, int position) {
+        Pokemon current = pokemon.get(position);
+        holder.textView.setText(current.getName());
+    }
+
+----------------------------------------------------------
+
+How many rows to display
+1.
