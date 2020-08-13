@@ -179,4 +179,162 @@ PLEASE NOTE: we will learn how to import data in a seprate lesson. This is just 
 ----------------------------------------------------------
 
 How many rows to display
-1.
+1. create row for the list which is the equivalent size of the pokemon's data
+
+    @Override
+    public int getItemCount() {
+        return pokemon.size();
+    }
+
+----------------------------------------------------------
+
+Use the Adapter
+1. add the views you created to the MainActivity.java file
+
+public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+}
+
+2. add the views just below, under the OnCreate class
+
+public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById((R.id.recycler_view));
+        adapter = new PokedexAdapter();
+        layoutManager = new LinearLayoutManager(this);
+
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(layoutManager);
+    }
+}
+
+3. Run the program
+
+----------------------------------------------------------
+
+Create a new activity to pop up when one of the pokemon are selected
+1. control click java app --> New -->  Activity --> Empty Activity
+2. locate the new xml file created under res --> layout
+3. Customize the XML file to change the appearance
+    - add two textviews
+    - add padding and content
+    - follow the below example
+
+    <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PokemonActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokemon_name"
+        android:textAlignment="center"
+        android:textSize="18dp"
+        android:paddingTop="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pokemon_number"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        android:paddingTop="5dp" />
+
+</LinearLayout>
+
+4. Return to the newly created Activity file
+    - add the two views created above
+    - add the values to the OnCreate class
+    - follow the below code
+
+    package io.gianmillare.pokedex;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.TextView;
+
+public class PokemonActivity extends AppCompatActivity {
+    private TextView nameTextView;
+    private TextView numberTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pokemon);
+
+        String name = getIntent().getStringExtra("name");
+        int number = getIntent().getIntExtra("number", 0);
+
+        nameTextView = findViewById(R.id.pokemon_name);
+        numberTextView = findViewById(R.id.pokemon_number);
+
+        nameTextView.setText(name);
+        numberTextView.setText(Integer.toString(number));
+    }
+}
+
+----------------------------------------------------------
+
+Implement a way to pass data form the first Activity to the second Activity
+1. Go back to the Pokemon Adapter (where you have the list of data)
+    - this is in the OnBind view holder
+2. Add the below code to the onBindViewHolder
+
+    @Override
+    public void onBindViewHolder(@NonNull PokedexViewHolder holder, int position) {
+        Pokemon current = pokemon.get(position);
+        holder.textView.setText(current.getName());
+
+        holder.containerView.setTag(current);
+    }
+
+----------------------------------------------------------
+
+Create an event handler
+1. under PokemonViewHolder, create a OnClickListener
+2. then create an OnClick class, follow the below code
+
+public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokedexViewHolder> {
+    public static class PokedexViewHolder extends RecyclerView.ViewHolder {
+        public LinearLayout containerView;
+        public TextView textView;
+
+        PokedexViewHolder(View view) {
+            super(view);
+            containerView = view.findViewById(R.id.pokedex_row);
+            textView = view.findViewById(R.id.pokedex_row_text_view);
+
+            containerView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Pokemon current = (Pokemon) containerView.getTag();
+                    Intent intent = new Intent(view.getContext(), PokemonActivity.class);
+                    intent.putExtra("name", current.getName());
+                    intent.putExtra("number", current.getNumber());
+
+                    view.getContext().startActivity(intent);
+                }
+            });
+        }
+    }
