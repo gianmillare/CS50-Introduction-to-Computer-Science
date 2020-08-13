@@ -338,3 +338,9 @@ public class PokedexAdapter extends RecyclerView.Adapter<PokedexAdapter.PokedexV
             });
         }
     }
+
+----------------------------------------------------------
+
+Final Touches
+1. Go back to the XML file you want to edit (in this case it is pokemon_row)
+2. edit accordingly (add padding, fix font, ripple effects, etc.)
