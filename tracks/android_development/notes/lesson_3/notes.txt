@@ -1,0 +1,19 @@
+Lesson 3 Notes: Continuing the Pokedex app
+
+Using APIs to bridge data to the application
+1. APIs
+    - JSON JavaScript Object Notation
+    - Hosted on some server waiting to be used
+    - JSON is usually in the form of key; value pairings
+
+2. pokeapi.co
+    - play around with the information used here
+
+3. Getting the API data
+- click resource lists on the left
+- to bridge api to android, use VOLLEY
+- add the VOLLEY to the dependencies in gradle
+- Try and Except block
+    - a way to get over exceptions and errors
+    - often used in app development
+    
