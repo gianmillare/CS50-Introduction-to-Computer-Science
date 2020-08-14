@@ -17,3 +17,190 @@ Using APIs to bridge data to the application
     - a way to get over exceptions and errors
     - often used in app development
     
+4. Connecting to API
+- add volley to build.gradle
+- add the connection request to Pokemon Adapter
+
+    private List<Pokemon> pokemon = new ArrayList<>();
+
+    public void loadPokemon() {
+        String url = "https://pokeapi.co/api/v2/pokemon/?limit=151";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray results = response.getJSONArray("results");
+                } catch (JSONException e) {
+                    Log.e("cs50", "Json error", e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("cs50", "Pokemon List Error");
+            }
+        });
+    }
+
+5. Getting the Data from the API
+- create a for loop within the try and except block (if try is successfuly)
+
+public void loadPokemon() {
+        String url = "https://pokeapi.co/api/v2/pokemon/?limit=151";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray results = response.getJSONArray("results");
+                    for (int i = 0; i < results.length(); i++) {
+                        JSONObject result = results.getJSONObject(i);
+                        pokemon.add(new Pokemon(
+                                result.getString("name"),
+                                result.getString("url")
+                        ));
+                    }
+                } catch (JSONException e) {
+                    Log.e("cs50", "Json error", e);
+                }
+            }
+
+6. Create a request queue
+   private List<Pokemon> pokemon = new ArrayList<>();
+    private RequestQueue requestQueue;
+
+    PokedexAdapter(Context context) {
+        requestQueue = Volley.newRequestQueue(context);
+        loadPokemon();
+    }
+
+    public void loadPokemon() {
+        String url = "https://pokeapi.co/api/v2/pokemon/?limit=151";
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray results = response.getJSONArray("results");
+                    for (int i = 0; i < results.length(); i++) {
+                        JSONObject result = results.getJSONObject(i);
+                        pokemon.add(new Pokemon(
+                                result.getString("name"),
+                                result.getString("url")
+                        ));
+                    }
+                } catch (JSONException e) {
+                    Log.e("cs50", "Json error", e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("cs50", "Pokemon List Error");
+            }
+        });
+
+        requestQueue.add(request);
+    }
+
+7. Add getApplicationCOntext() to MainActivity
+
+        recyclerView = findViewById(R.id.recycler_view);
+        adapter = new PokedexAdapter(getApplicationContext());
+        layoutManager = new LinearLayoutManager(this);
+
+
+8. Check that the API is Connecting
+- include the below code right after try block in pokemon adapter
+                try {
+                    JSONArray results = response.getJSONArray("results");
+                    for (int i = 0; i < results.length(); i++) {
+                        JSONObject result = results.getJSONObject(i);
+                        pokemon.add(new Pokemon(
+                                result.getString("name"),
+                                result.getString("url")
+                        ));
+                    }
+                    notifyDataSetChanged();
+                } catch (JSONException e) {
+                    Log.e("cs50", "Json error", e);
+                }
+            }
+
+9. connect to internet
+- include the below code into the ANdroidManifest file right before the end tag
+
+<uses-permission android:name="android.permission.INTERNET" />
+
+10. Adding more views for other fields (example: type1 and type2)
+- create a load() class inside PokemonActivty similar to how you loaded the API in the above steps
+    - you can copy and paste the API loader in here and make changes accordingly
+- change the load function like the Example: --> ensure you are adding the objects you want to pull. here is is "slot" and "type"
+
+public void load() {
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray typeEntries =  response.getJSONArray("types");
+                    for (int i = 0; i < typeEntries.length(); i++) {
+                        JSONObject typeEntry = typeEntries.getJSONObject(i);
+                        int slot = typeEntry.getInt("slot");
+                        String type = typeEntry.getJSONObject("type").getString("name");
+                    }
+                } catch (JSONException e) {
+                    Log.e("cs50", "Pokemon Json error", e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("cs50", "Pokemon Details Error");
+            }
+        });
+    }
+
+11. Add the views to the pokemonactivity file, add the views to the OnCreate portion of pokemonactivity
+- whatever you want to show on the app will require a view from an API
+- follow the below code, pay special attention to the formatting of view responses (i.e. nameTextView)
+
+public void load() {
+        type1TextView.setText("");
+        type2TextView.setText("");
+
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    nameTextView.setText(response.getString("name"));
+                    numberTextView.setText(String.format("#%03d", response.getInt("id")));
+
+                    JSONArray typeEntries =  response.getJSONArray("types");
+                    for (int i = 0; i < typeEntries.length(); i++) {
+                        JSONObject typeEntry = typeEntries.getJSONObject(i);
+                        int slot = typeEntry.getInt("slot");
+                        String type = typeEntry.getJSONObject("type").getString("name");
+
+                        if (slot == 1) {
+                            type1TextView.setText(type);
+                        } else if (slot == 2) {
+                            type2TextView.setText(type);
+                        }
+                    }
+                } catch (JSONException e) {
+                    Log.e("cs50", "Pokemon Json error", e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e("cs50", "Pokemon Details Error");
+            }
+        });
+    }
+
+12. Add the request queue to pokemonactivity
+- private RequestQueue requestQueue;
+- requestQueue = Volley.newRequestQueue(getApplicationContext());
+- requestQueue.add(request);
+
+---> dont forget to call load in the OnCreate class
+- load();
