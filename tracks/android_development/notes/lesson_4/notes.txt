@@ -1,0 +1,4 @@
+Lesson 4: Fiftygram
+
+1. Create a new app
+- run the build and then run the app/emulator. Ensure that everything is working correctly.
