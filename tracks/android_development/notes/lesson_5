@@ -192,4 +192,28 @@ III. Saving a note to the Disk
         *** This is called parameter binding ***
     void save(String contents, int id)
 
-8.
+Follow the below code:
+
+@Dao
+public interface NoteDao {
+    @Query("INSERT INTO notes (contents) VALUES ('New note')")
+    void create();
+
+    @Query("SELECT * FROM notes")
+    List<Note> getAllNotes();
+
+    @Query("UPDATE notes SET contents = :contents WHERE id = :id")
+    void save(String contents, int id);
+}
+
+8. Create a database class to access the DAO
+    create new class --> NotesDatabase
+    add annotation @Database(entities = {NoteDao.class}, version = 1)
+    .... public class.....
+
+    extend the RoomDatabase
+    add abstract to the public class (public abstract class)
+    *** abstract classes will allow the room library to generate usable code without us having to write it. ***
+    add another abstract class inside the first abstract class
+        public abstract NoteDao noteDao();
+        
