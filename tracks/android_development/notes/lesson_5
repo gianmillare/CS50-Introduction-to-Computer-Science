@@ -166,3 +166,30 @@ public class Note {
         recyclerView.setAdapter(adapter);
     }
 }
+
+7. Class DAO (Data Access Object): Write model to do three things
+This also uses the Room Persistence Library
+
+I. Create a new note
+    Create New JavaClass --> NoteDao
+    change class to interface
+    add annotation @DAO
+    add annotation @Query(SQL Code)
+        --> @Query(INSERT INTO notes (contents) VALUES ('New note)" )
+    void create() --> method to create a note
+
+II. Obtain Already created notes
+    under the above code
+    add annotation @Query()
+        --> @Query("SELECT * FROM notes")
+    List<Note> getAllNotes();
+
+III. Saving a note to the Disk
+    under the above code
+
+    add annotation @Query
+        --> ("UPDATE notes SET contents = :contents WHERE id = :id")
+        *** This is called parameter binding ***
+    void save(String contents, int id)
+
+8.
