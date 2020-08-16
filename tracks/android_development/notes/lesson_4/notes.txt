@@ -2,3 +2,155 @@ Lesson 4: Fiftygram
 
 1. Create a new app
 - run the build and then run the app/emulator. Ensure that everything is working correctly.
+
+2. Scroll View + Linear Layout + Button
+- another way to scroll similar to the Text View list
+- throwing in the Linear Layout inside the scroll view to make it layered
+- the button takes in a text that is clickable
+
+3. Selecting a photo and uploading it into the app
+
+MainActivity.java
+private ImageView imageView;
+imageView = findViewById(R.id.image_view);
+
+Method:
+//    Create a method that will allow a user to upload a picture into the app
+    public void choosePhoto(View view) {
+//        create an intent to open a document
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+//        specify what type of document should be opened/uploaded
+        intent.setType("image/*");
+//        start the activity
+        startActivityForResult(intent, 1);
+    }
+
+change the activity main file to include the method above
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/image_view" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose Photo"
+            android:onClick="choosePhoto" />
+
+    </LinearLayout>
+</ScrollView>
+
+
+4. onActivityResults
+
+//    Create a method that returns a new activity after the above method
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+//        this method should only execute with the required requestCode and the data is not null
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            try {
+//            pass a URI that contains the path to the data you are pulling (an image on the desk)
+                Uri uri = data.getData();
+//            pull the data from the path
+                ParcelFileDescriptor parcelFileDescriptor = getContentResolver().openFileDescriptor(uri, "r");
+                FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
+            } catch (FileNotFoundException e) {
+                Log.e("cs50", "Image not found", e);
+            }
+        }
+    }
+
+5. Bitmap
+- add a bitmap to the onActivitesResults above
+
+private Bitmap image;
+
+.....
+
+//    Create a method that returns a new activity after the above method
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+//        this method should only execute with the required requestCode and the data is not null
+        if (resultCode == Activity.RESULT_OK && data != null) {
+            try {
+//            pass a URI that contains the path to the data you are pulling (an image on the desk)
+                Uri uri = data.getData();
+//            pull the data from the path
+                ParcelFileDescriptor parcelFileDescriptor = getContentResolver().openFileDescriptor(uri, "r");
+                FileDescriptor fileDescriptor = parcelFileDescriptor.getFileDescriptor();
+                image = BitmapFactory.decodeFileDescriptor(fileDescriptor);
+                parcelFileDescriptor.close();
+                imageView.setImageBitmap(image);
+            } catch (IOException e) {
+                Log.e("cs50", "Image not found", e);
+            }
+        }
+    }
+}
+
+6. Image Filters (using libraries)
+
+https://github.com/wasabeef/glide-transformations
+
+- add the below code to the build gradle file
+implementation 'jp.wasabeef:glide-transformations:4.1.0'
+
+- add the GPU Filters
+implementation 'jp.co.cyberagent.android:gpuimage:2.0.4'
+
+- this particular library also requires the below dependencies
+implementation 'com.github.bumptech.glide:glide:4.11.0'
+annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+
+7. Create the views for the Filters
+- this will be in activity_main.xml and MainActivity
+- REMEMBER: once you make a view, create a method for it in MainActivity
+
+activity_main.xml --> 
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sepia"
+            android:onClick="applySepia" />
+
+MainActivity
+//    Create the method that applies a Sepia Filter on the image
+    public void applySepia(View view) {
+//        The below code is found from the documentation of "glide transformations github"
+        Glide.with(this).load(image).apply(RequestOptions.bitmapTransform(new SepiaFilterTransformation())).into(imageView);
+    }
+
+8. Repeat step 7 for as many filters as needed
+
+For multiple filters, you can shorten code by using the below in MainActivity:
+
+    public void apply(Transformation<Bitmap> filter) {
+        Glide.with(this).load(image).apply(RequestOptions.bitmapTransform(filter)).into(imageView);
+    }
+
+    public void applySepia(View view) {
+        apply(new SepiaFilterTransformation());
+    }
+
+    public void applyToon(View view) {
+        apply(new ToonFilterTransformation());
+    }
+
+    public void applySketch(View view) {
+        apply(new SketchFilterTransformation());
+    }
+
+CAUTION: Ensure you are using the correct library: import com.bumptech.glide.load.Transformation;
