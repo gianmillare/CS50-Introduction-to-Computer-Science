@@ -33,7 +33,8 @@ Delete the TextView in activity_main.xml and replace with recyclerview
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"/>
 
 2. Create an Adapter to manage the data inside the RecyclerView
 
@@ -75,6 +76,93 @@ public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteView
 
 5. The 3 Guidelines to ViewHolders
 
-    I. Bind the ViewHolder  
-    II. Create the ViewHolder 
+    *** Begin under the public class NoteViewHolder
+
+    I. Create the ViewHolder 
+        type oncreate and tab to autocomplete the onCreateViewHolder code 
+        this portion requires inflating the context and layout
+
+    @NonNull
+    @Override
+    public NoteViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.notable_row, parent, false);
+        return new NoteViewHolder(view);
+    }
+
+    II. Bind the ViewHolder  
+        Using Android Studio's Room Persistence Library
+
+        copy the gradle file via documentation
+    
+    implementation "androidx.room:room-runtime:2.2.5"
+    annotationProcessor "androidx.room:room-compiler:2.2.5"
+    Sync
+
+    Create a new model class
+    control +click on app folder --> New --> Java Class --> 'Note'
+    create the class with id and contents of the Note include annotations:
+        Primary KEY
+        Column info
+        Entity
+    
+//This will create a table consisting of two columns: id and contents
+@Entity(tableName = "notes")
+public class Note {
+    @PrimaryKey
+    public int id;
+
+    @ColumnInfo(name = "contents")
+    public String contents;
+}
+
+    Add the new model (above) to the NotableAdapter
+
+    right before the onCreateViewHolder:
+    private List<Note> notes = new ArrayList<>();
+
+    Now, you can create the onBindViewHolder right after the onCreateViewHolder:
+    @Override
+    public void onBindViewHolder(@NonNull NoteViewHolder holder, int position) {
+        Note current = notes.get(position);
+        holder.textView.setText(current.contents);
+    }
+
     III. Find the number of items in the list
+    use getItemCount
+
+    @Override
+    public int getItemCount() {
+        return notes.size();
+    }
+
+6. Add the necessary classes to MainActivity
+
+    in MainActivity
+
+    create a RecyclerView
+    create the NotableAdapter
+    create LayoutManager
+
+    inside onCreate:
+    add recyclerview, LayoutManager, and Adapter
+    set the above 
+    view the below
+
+    public class MainActivity extends AppCompatActivity {
+    private RecyclerView recyclerView;
+    private NotableAdapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        recyclerView = findViewById(R.id.recycler_view);
+        layoutManager = new LinearLayoutManager(this);
+        adapter = new NotableAdapter();
+
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+    }
+}
