@@ -92,4 +92,6 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Notes | [Lesson 2](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_2/notes.txt) | Java | N/A |
 | Notes | [Lesson 2 - Pokedex Development](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_2/android_dev_notes_2.txt) | Java | N/A |
 | Notes | [Lesson 3 - Pokedex Development](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_3/notes.txt) | Java | N/A |
+| Practice | [Android App - Pokedex](https://github.com/gianmillare/Android-Pokedex) | Java | N/A |
 | Notes | [Lesson 4 - Fiftygram](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/notes/lesson_4/notes.txt) | Java | N/A |
+| Practice | [Android App - Fiftygram](https://github.com/gianmillare/Android-Fiftygram) | Java | N/A |
