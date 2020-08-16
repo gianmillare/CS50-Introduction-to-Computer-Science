@@ -271,4 +271,67 @@ follow the below code:
         app:srcCompat="@android:drawable/ic_input_add"
         android:tint="@color/cardview_light_background" />
 
-11.
+11. Add an action to the button
+
+under onCreate in MainActivity
+right before adapter.reload()
+
+        FloatingActionButton button = findViewById(R.id.add_note_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                database.noteDao().create();
+                adapter.reload();
+            }
+        });
+
+12. Creating a new activity to display the full contents of a note and enable a user to change it
+create new activity --> NoteActivity
+got to the activity_note layout file
+create an EditText
+width = match aprent
+height match parent
+id = note_edit_text
+
+go to NOteActivity.jaja
+create a private EditText
+add editText to onCreate using id.
+
+Load the note using intent :
+under the above code
+String contents = getIntent().getStringExtr("contents");
+editText.setText(contents);
+
+save the note into the database
+under onCreate
+create a new onPause
+create a private int id;
+use intent to store it
+id = getIntent().getIntExtra("id", 0);
+go back to the onPause
+super.onPause();
+MainActivity.database.noteDao().save(editTexxt.gettest(), id)
+
+13. attach a click listener to the container
+
+Open NotableAdapter
+under NoteViewHolder
+create a containerView.setOnClickListener
+under onBindViewHolder
+holder.containerView.setTag(current);
+Scroll up to  NoteViewHolder, under super(view) section
+NOte current = (Note) continerView.getTag()
+inside the setOnClickListener
+create the intent
+putExtra in the intent
+putExtra contents
+start the activity by passing the intent
+
+go back to MainActivity
+under adapter.reload()
+create onResume
+move the adapter.reload() to the end of onResume
+
+14. Appearance changes
+
+change the appearance via xml files
