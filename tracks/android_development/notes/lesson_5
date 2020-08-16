@@ -216,4 +216,34 @@ public interface NoteDao {
     *** abstract classes will allow the room library to generate usable code without us having to write it. ***
     add another abstract class inside the first abstract class
         public abstract NoteDao noteDao();
-        
+
+@Database(entities = {NoteDao.class}, version = 1)
+public abstract class NotesDatabase extends RoomDatabase {
+    public abstract NoteDao noteDao();
+}
+
+
+9. Use the Model code in the applicaiton
+go back into MainActivity
+define an object representing a connection to the database
+    public static NotesDatabase database;
+
+set database value, follow the below code
+database = Room.databaseBuilder(getApplicationContext(), NotesDatabase.class, "notes").allowMainThreadQueries().build();
+
+go to NotableAdapter --> pull all data from DAO
+create new method to load everything from database --> named "reload"
+follow the below code
+
+    public void reload() {
+        notes = MainActivity.database.noteDao().getAllNotes();
+        notifyDataSetChanged();
+    }
+
+go back to MainActivity
+inside the onCreateViewHolder
+add the code you made in the Adapter, follow the below code:
+    adapter.reload();
+
+10.
+
