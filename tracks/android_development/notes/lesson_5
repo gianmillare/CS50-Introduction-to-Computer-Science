@@ -1,0 +1,43 @@
+Lesson 5: 
+
+*** Save data to the users device from your app, using SQLite ***
+
+Examples of SQLite Queries:
+
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+    name TEXT
+)
+---------
+INSERT INTO users (name)
+VALUES ('Tommy')
+---------
+SELECT * FROM users
+WHERE name = 'Tommy'
+---------
+UPDATE users
+SET name = 'Tommy M'
+WHERE name = 'Tommy'
+---------
+
+Making the app
+
+1. Add the views (Recycler View)
+
+Because we are using Recycler view, first add the Recycler View dependency to your build.gradle app file
+implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+then Refactor --> AndroidX
+
+Delete the TextView in activity_main.xml and replace with recyclerview
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+2. Create an Adapter to manage the data inside the RecyclerView
+
+In the same folder as MainActivity.java, create a new file named NotableAdapter
+control + click the folder --> New Class 
+In the same folder as activity_main.xml, create a new xml file for the adapters layout 
+res --> layout --> control + click the folder --> New --> Layout Resource file --> 'notable_row' --> LinearLayout
