@@ -217,7 +217,7 @@ public interface NoteDao {
     add another abstract class inside the first abstract class
         public abstract NoteDao noteDao();
 
-@Database(entities = {NoteDao.class}, version = 1)
+@Database(entities = {Note.class}, version = 1)
 public abstract class NotesDatabase extends RoomDatabase {
     public abstract NoteDao noteDao();
 }
@@ -245,5 +245,30 @@ inside the onCreateViewHolder
 add the code you made in the Adapter, follow the below code:
     adapter.reload();
 
-10.
+10. Creating a button to create a new note
+class used --> floating action button
+open gradle build file
+    implementation 'com.google.android.material:material:1.0.0'
 
+go to activity_main.xml
+change constraint layout to coordinator layout
+add com.google.android.material.floatingactionbutton
+    width = wrap_content
+    height = wrap_content
+    id = add_note_button
+    layout_gravity = bottom|right
+    layout_margin = 16dp
+    app:srcCompat="@android:drawable/ic_input_add"
+    tint = @color/cardview_light_background
+
+follow the below code:
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_note_button"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="16dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:tint="@color/cardview_light_background" />
+
+11.
