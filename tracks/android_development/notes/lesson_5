@@ -41,3 +41,40 @@ In the same folder as MainActivity.java, create a new file named NotableAdapter
 control + click the folder --> New Class 
 In the same folder as activity_main.xml, create a new xml file for the adapters layout 
 res --> layout --> control + click the folder --> New --> Layout Resource file --> 'notable_row' --> LinearLayout
+
+3. Modify the notable_row file
+
+add an ID and add a TextView
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/notable_row">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/notable_row_text" />
+
+</LinearLayout>
+
+4. Modify the NotableAdapter file
+
+extend the RecyclerView.Adapter and create the Class
+public class NotableAdapter extends RecyclerView.Adapter<NotableAdapter.NoteViewHolder> {
+    public static class NoteViewHolder extends RecyclerView.ViewHolder {
+        LinearLayout containerView;
+        TextView textView;
+
+        NoteViewHolder(View view) {
+            super(view);
+
+            containerView = view.findViewById(R.id.notable_row);
+            textView = view.findViewById(R.id.notable_row_text);
+        }
+    }
+}
+
+5. The 3 Guidelines to ViewHolders
+
+    I. Bind the ViewHolder  
+    II. Create the ViewHolder 
+    III. Find the number of items in the list
