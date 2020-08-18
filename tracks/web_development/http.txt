@@ -22,4 +22,4 @@ HTTP (Hypertext Transfer Protocol) = What is being sent between devices (what is
     HTTP/1.1 200 OK ------> this is the response saying the connection is good
     Content-Type: text/html
 
-    
+Developer tools --> Network --> shows the traffic within the webpage
