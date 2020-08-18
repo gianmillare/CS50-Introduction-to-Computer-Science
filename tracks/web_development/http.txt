@@ -1,0 +1,25 @@
+How devices speak to each other.
+
+TCP/IP = the address of a device needed to communicate to others
+    - this is equivalent to the address written on an envelope via snail mail
+    - the IP address is in format #.#.#.#, each # can be anywhere between 0-255
+        - this is limited to 32 bits or about 4 billion IP address
+        - also called IPv4
+    - IPv6 is now available using 128 bits
+
+Port Number (21, 25, 80 {HTTP})= How to distinguish WHAT is being sent or received to the device
+    - 1.2.3.4:80 --> This means we are sending a web address from one device to another
+
+Domain Name System (DNS) = a 'nickname' system that allows a website to have an alias other than 172.217.7.206
+    - Example: google.com 
+    - the device will be able to decode a DNS to receive an IP address to bring us to a specific web page
+
+HTTP (Hypertext Transfer Protocol) = What is being sent between devices (what is inside, the contents)
+    GET / HTTP/1.1
+    Host: www.example.com
+    ...
+
+    HTTP/1.1 200 OK ------> this is the response saying the connection is good
+    Content-Type: text/html
+
+    
