@@ -1,0 +1,42 @@
+Cascading Style Sheets (CSS)
+
+Used in conjunction with HTML files:
+
+<html lang="en">
+    <head>
+        <title>
+            Some Text
+        </title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
+</html>
+
+--------------------------------------------
+
+Usually, to use CSS, people would embed it into the HTML files
+but you also have the option to make the CSS file separate
+
+Example of embedding into an HTML file:
+<h1 style="color: blue;">Hello, world</h1>
+<p style="color: red;">This is a practice webpage</p>
+
+--------------------------------------------
+
+Two different kinds of styling:
+
+In-style --> Where you style tags inside that tag themselves (noted above)
+
+Header style --> All shared-tags can be styled with one line of code in the Header:
+    <head>
+        <title>
+            Practice
+        </title>
+        <style>
+            h2 {
+                text-align: center;
+                color: blue;
+            }
+        </style>
+    </head>
