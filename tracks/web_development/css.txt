@@ -40,3 +40,45 @@ Header style --> All shared-tags can be styled with one line of code in the Head
             }
         </style>
     </head>
+
+--------------------------------------------
+
+Classes
+
+You can give a tag a class="" and style the class in the header by referencing using a "."
+Example:
+
+    <head>
+        <title>
+            Practice
+        </title>
+        <style>
+            .title {
+                text-align: center;
+                color: blue;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body style="background-color: azure;">
+        <h1 class="title">Hello, world</h1>
+        <h2 class="title">This is a subsection</h2>
+        <p class="red">This is a paragraph section</p>
+        <h2 class="title">This is another subsection</h2>
+        <p class="red">This is another paragraph</p>
+    </body>
+
+
+
+You can also apply multiple styles by naming a tag with two classes. Example:
+
+<h1 class="title red">Hello, world</h1>
+--------------------------------------------
+
+Styling using CSS in a completely different file
+
+you can style an html file by creating a separate css file and importing the css file into the html file.
+
+refer to files home.html and style.css
+
+--------------------------------------------
