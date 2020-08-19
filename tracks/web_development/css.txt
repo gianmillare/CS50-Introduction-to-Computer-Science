@@ -82,3 +82,20 @@ you can style an html file by creating a separate css file and importing the css
 refer to files home.html and style.css
 
 --------------------------------------------
+
+Table styling --> refer to table.html
+
+--------------------------------------------
+
+Bootstrap
+
+One of the best websites to import. Contains several up-to-date css libraries
+
+google getbootstrap
+documentation
+quick start
+copy the code under the CSS section starting with "link" tag
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+for more tricks in using bootstrap with css, read the documentation
+refer to bootstrap.html
