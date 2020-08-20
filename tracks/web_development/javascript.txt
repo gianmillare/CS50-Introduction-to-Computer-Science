@@ -227,3 +227,38 @@ Introducing window.setInterval(functionName, milliseconds)
 
 Referencing a javascript file to import styling into the html file: 8.html + example.js 
 
+8.html:
+    <head>
+        <title>Separate JS File</title>
+        <script src="example.js"></script>
+    </head>
+    <body style="text-align: center;">
+        This is a blinking text from a separate javascript file.
+    </body>
+
+example.js:
+function blink() {
+    let body = document.querySelector('body');
+    if (body.style.visibility === "hidden") {
+        body.style.visibility = "visible";
+    } else {
+        body.style.visibility = "hidden";
+    }
+}
+
+window.setInterval(blink, 500);
+
+------------------------------------------------
+
+Geolocation: 9.html
+
+Introducing navigator.geolocation.getCurrentPosition(function(position))
+Introducing document.write
+
+    <body>
+        <script>
+            navigator.geolocation.getCurrentPosition(function (position) {
+                document.write(position.coords.latitude + ', ' + position.coords.longitude);
+            })
+        </script>
+    </body>
