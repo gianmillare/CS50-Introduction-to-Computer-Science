@@ -114,3 +114,43 @@ Functions with document.querySelector: 2.html
 
 Using User input to be displayed in the body: 3.html
 
+<script>
+            function greet() {
+                let name = document.querySelector('#name').value;
+                if (name == '') {
+                    name = 'world';
+                }
+                document.querySelector('#results').innerHTML = "Hello, " + name + "!";
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input type="text" id="name">
+            <input type="submit">
+        </form>
+        <div id="results">
+
+        </div>
+
+------------------------------------------------
+
+Counter that increments every submit: 4.html
+
+<script>
+            let counter = 0;
+            function increment() {
+                counter++;
+                document.querySelector('#results').innerHTML = counter;
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="increment(); return false;">
+            <input type="submit">
+        </form>
+        <div id="results">
+            0
+        </div>
+
+------------------------------------------------
