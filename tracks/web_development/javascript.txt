@@ -29,3 +29,85 @@ function functionName(n) {
 }
 
 ------------------------------------------------
+
+Basic webpage (for copy and pasting)
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Practice
+        </title>
+    </head>
+    <body>
+        Hello, World!
+    </body>
+</html>
+
+------------------------------------------------
+
+Document Object Model (DOM) --> A structure of a webpage that indicates a "blueprint" for its contents
+
+------------------------------------------------
+
+JavaScript Webpages
+
+Embedding JavaScript in html: functions.html
+        <script>
+            alert("Hello!");
+        </script>
+
+------------------------------------------------
+
+Using JavaScript Functions: functions.html
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>
+            Practice
+        </title>
+        <script>
+            function greet() {
+                // This will display a popup message
+                alert("Hello!");
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+------------------------------------------------
+
+Functions with document.querySelector: documentquerySelector.html
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Practice</title>
+        <script>
+            function greet() {
+                let name = document.querySelector("#name").value;
+                if (name == '') {
+                    name = 'world';
+                }
+                alert('Hello, ' + name + '!');
+            }
+        </script>
+    </head>
+    <body>
+        <form onsubmit="greet(); return false;">
+            <input type="text" id="name">
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+------------------------------------------------
