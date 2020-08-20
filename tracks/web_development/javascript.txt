@@ -178,3 +178,8 @@ Introducing "onclick"
 
 ------------------------------------------------
 
+Select elements (dropdown menus): 6.html
+NOTE: options tags inside the select tags take in value tags instead of ids 
+NOTE: giving an options tage a "selected" tag will make that option a default
+Introducing "onchange" and "this"
+
