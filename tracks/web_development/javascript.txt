@@ -225,3 +225,5 @@ Introducing window.setInterval(functionName, milliseconds)
 
 ------------------------------------------------
 
+Referencing a javascript file to import styling into the html file: 8.html + example.js 
+
