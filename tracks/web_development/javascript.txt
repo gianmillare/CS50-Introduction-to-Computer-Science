@@ -53,14 +53,14 @@ Document Object Model (DOM) --> A structure of a webpage that indicates a "bluep
 
 JavaScript Webpages
 
-Embedding JavaScript in html: functions.html
+Embedding JavaScript in html: 1.html
         <script>
             alert("Hello!");
         </script>
 
 ------------------------------------------------
 
-Using JavaScript Functions: functions.html
+Using JavaScript Functions: 1.html
 
 <!DOCTYPE html>
 
@@ -85,7 +85,7 @@ Using JavaScript Functions: functions.html
 
 ------------------------------------------------
 
-Functions with document.querySelector: documentquerySelector.html
+Functions with document.querySelector: 2.html
 
 <!DOCTYPE html>
 
@@ -111,3 +111,6 @@ Functions with document.querySelector: documentquerySelector.html
 </html>
 
 ------------------------------------------------
+
+Using User input to be displayed in the body: 3.html
+
