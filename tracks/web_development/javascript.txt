@@ -1,0 +1,31 @@
+JavaScript Syntax
+
+Declaring a variable:
+let counter = 0;
+
+Incrememnting
+counter++;
+
+Conditions
+if (x < y) {
+
+} else {
+
+}
+
+While loops
+while (true conditions) {
+
+}
+
+For loops
+for (let i = 0; i < arr.length; i++) {
+
+}
+
+Functions
+function functionName(n) {
+
+}
+
+------------------------------------------------
