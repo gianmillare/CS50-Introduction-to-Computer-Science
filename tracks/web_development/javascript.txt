@@ -183,3 +183,45 @@ NOTE: options tags inside the select tags take in value tags instead of ids
 NOTE: giving an options tage a "selected" tag will make that option a default
 Introducing "onchange" and "this"
 
+    <body>
+        <p>This is some text to practice changing text size using JavaScript!</p>
+        <select>
+            <option value="large">Large Text</option>
+            <option value="initial" selected>Medium Text</option>
+            <option value="small">Small Text</option>
+        </select>
+        <script>
+            document.querySelector('select').onchange = function() {
+                document.querySelector('p').style.fontSize = this.value;
+            }
+        </script>
+    </body>
+
+------------------------------------------------
+
+Blinking (disappearing and reappearing text): 7.html
+
+Introducing .style.visibility
+Introducing window.setInterval(functionName, milliseconds)
+
+    <head>
+        <title>Blinking</title>
+        <script>
+            function blink() {
+                let body = document.querySelector('body');
+                if (body.style.visibility === "hidden") {
+                    body.style.visibility = "visible";
+                } else {
+                    body.style.visibility = "hidden";
+                }
+            }
+
+            window,setInterval(blink, 500);
+        </script>
+    </head>
+    <body>
+        Hello, Gian Millare!
+    </body>
+
+------------------------------------------------
+
