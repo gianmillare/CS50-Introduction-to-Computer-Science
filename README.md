@@ -102,4 +102,4 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Category | Name | Language | Grade |
 | ------------- | ------------- | ------------- | ------------- |
 | Notes | [HTML - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/html.txt) | HTML | N/A |
-| Notes | [HTML - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/html_practice) | HTML | N/A |
+| Practice | [HTML - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/html_practice) | HTML | N/A |
