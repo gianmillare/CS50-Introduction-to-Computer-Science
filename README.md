@@ -107,3 +107,4 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Practice | [CSS - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/css_practice) | CSS | N/A |
 | Notes | [JavaScript - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/javascript.txt) | JavaScript | N/A | 
 | Practice | [JavaScript - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/javascript_practice) | JavaScript | N/A |
+| Assignment | [Web - Homepage](https://github.com/gianmillare/Web-Homepage) | HTML, CCS, JavaScript | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/results/submit50_homepage) |
