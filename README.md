@@ -97,3 +97,9 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Practice | [Android App - Fiftygram](https://github.com/gianmillare/Android-Fiftygram) | Java | N/A |
 | Notes | [Lesson 5 - Notable](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/android_development/lesson_5/notes.txt) | Java | N/A |
 | Practice | [Android App - Notable](https://github.com/gianmillare/Android-Notable) | Java | N/A |
+
+### Tracks: Web Development
+| Category | Name | Language | Grade |
+| ------------- | ------------- | ------------- | ------------- |
+| Notes | [HTML - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/html.txt) | HTML | N/A |
+| Notes | [HTML - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/html_practice) | HTML | N/A |
