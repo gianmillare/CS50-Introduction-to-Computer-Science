@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block style %}
+h1 {
+    color: blue;
+}
+
+body {
+    text-align: center;
+}
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1>To Do List</h1>
+        {% for i in items %}
+            <h5>{{ i }}</h5>
+        {% endfor %}
+    </div>
+
+    <div class="container">
+        <a href="/add">Create a new task</a>
+    </div>
+{% endblock %}

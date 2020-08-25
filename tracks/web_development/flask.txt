@@ -196,3 +196,32 @@ Then in the "Master" html file
 REVIEW LAYOUT FOLDER UNDER flask_practice
 
 ------------------------------------------------------------------------------------------
+
+To do List web application --> see "tasks" folder under flask_practice
+
+INTRODUCING:
+- placeholder
+- GET and POST ----> app.py = methods=["GET", "POST"]
+- add method="POST" to the form tag
+- request.method
+- request.form.get
+- redirect
+- give variable from POST into the index.html
+- Create a loop inside task.html that will loop through the variable list in app.py
+------> {%% for i in list %}
+            <li> {{ i }} </li>
+        {% endfor %}
+
+- using Javascript to ensure text is placed inside the form
+    - give both input fields a unique ID 
+    - document.querySelector('#tasks').onkeyup = function() {
+        if (document.querySelector('#task').value == ') {
+            document.querySelector('#submit').disabled = true;
+        } else {
+            document.querySelector('#submit').disabled = false;
+        }
+    }
+    - the above javascript code will disable the submit button if the text is empty
+    - add "disabled" inside the input tag for submit
+
+------------------------------------------------------------------------------------------
