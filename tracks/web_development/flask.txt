@@ -81,3 +81,9 @@ html
     </body>
 
 ------------------------------------------------------------------------------------------
+
+Coin flipping using variables 0 and 1: folder --> coinflip
+
+1. change random range to 0 to 1
+2. insert a condition where 0 = tails and 1 = heads (conditions are done in the html file)
+
