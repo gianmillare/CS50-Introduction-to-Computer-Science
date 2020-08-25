@@ -43,3 +43,41 @@ Adding html, css, javascript via Flask Templates
 
 ------------------------------------------------------------------------------------------
 
+Using variables, loops, and conditions to make the app dynamic
+
+1. inside the app.py file, you can give the return variable another variable
+2. inside the html file, pass in the variable using syntax like {{ variableName }}
+
+app.py
+
+    @app.route("/") #This is the default webpage (homepage)
+    def index():
+        return render_template("index.html", name="Gian Millare")
+
+html
+
+    <body>
+        <h1>Hello to the world of Flask, {{ name }} !!</h1>
+    </body>
+
+------------------------------------------------------------------------------------------
+
+You can declare variables before the return line
+
+1. repeat the above code but call the variable before the return line
+
+app.py
+
+@app.route("/") #This is the default webpage (homepage)
+def index():
+    random_number = random.randint(1, 100)
+    return render_template("index.html", name="Gian Millare", number=random_number)
+
+html
+
+    <body>
+        <h1>Hello to the world of Flask, {{ name }} !!</h1>
+        <h2>Your lucky number is {{ number }}.</h2>
+    </body>
+
+------------------------------------------------------------------------------------------
