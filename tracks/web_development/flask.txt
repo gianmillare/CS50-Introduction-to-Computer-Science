@@ -153,3 +153,46 @@ Using conditions to loop in another page: no_name.html
 1. create a condition statement to render a specific html
 2. Create the error message
 
+@app.route("/name")
+def name():
+    name = request.args.get("myname")
+    if not name:
+        return render_template("no_name.html")
+    return render_template("yes_name.html", name=name)
+
+
+index
+
+        <form action="/name">
+            <input name="myname" type="text">
+            <input type="submit">
+        </form>
+
+no_name
+
+    <body>
+        <h1>You must provide a name!</h1>
+    </body>
+
+yes_name
+
+    <body>
+        <h1>It is a pleasure to meet you, {{ name }}!!</h1>
+    </body>
+
+------------------------------------------------------------------------------------------
+
+Layout.html to combine common html styles! ****Important**** ---> layout folder
+
+Use the following syntax to indicate the difference across multiple html files
+
+{% block body %}
+{% endblock %}
+
+Then in the "Master" html file
+
+{% extends "layout.html" %}
+
+REVIEW LAYOUT FOLDER UNDER flask_practice
+
+------------------------------------------------------------------------------------------
