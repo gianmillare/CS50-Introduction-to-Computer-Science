@@ -1,0 +1,45 @@
+Creating youre very own server: Flask to create a server
+
+1. Must be in one Master Folder
+2. Make a file inside the Master folder called app.py
+
+Review app.py to create a Flask server 
+(NOTE: On cs50 IDE the file must be titled "applicaiton.py")
+
+    from flask import Flask
+
+    app = Flask(__name__)
+
+    @app.route("/") #This is the default webpage (homepage)
+    def index():
+        return "Hello World!"
+
+    @app.route("/goodbye")
+    def bye():
+        return "Goodbye!"
+
+------------------------------------------------------------------------------------------
+
+Adding html, css, javascript via Flask Templates
+
+1. inside the Master Folder, create a folder title "template"
+2. create a new file inside it called index.html
+3. style the html
+4. import render_template inside the app.py
+5. render_template inside the specific function you want to run   
+
+    from flask import Flask, render_template
+
+    app = Flask(__name__)
+
+    @app.route("/") #This is the default webpage (homepage)
+    def index():
+        return render_template("index.html")
+
+    @app.route("/goodbye")
+    def bye():
+        return "Goodbye!"
+
+
+------------------------------------------------------------------------------------------
+
