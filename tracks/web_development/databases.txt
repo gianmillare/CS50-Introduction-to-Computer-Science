@@ -1,0 +1,32 @@
+Databases, Cookies, and Sessions
+
+1. After creating an application (i.e. To Do List in flask_practice)
+    - notice how everytime you run the program, the list resets at 0
+    - also all users will see the same data (a list of tasks)
+
+2. Import Sessions
+
+3. from flask_session import Session
+
+4. include the below code right after "app = Flask(__name__)
+
+app.config["SESSION_PERMANENT"] = False
+app.config["SESSION_TYPE"] = "filesystem"
+Session(app)
+
+5. create conditions inside the home html route
+    - if a list already exists in the session or not 
+
+    Example:
+    if "list_of_tasks" not in session:
+        // create a new list in the session
+        session["list_of_tasks"] = []
+    // if the list_of_tasks is already in the session, then render the list in memory
+    return render_template("index.html", list=session["list_of_tasks"])
+
+6. ensure all variables in other html files are specific to that session
+
+Example: 
+
+list_item = request.form.get("task")
+session["list_of_tasks"].append(list_item)

@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <h1 style="color: blue;">Tasks</h1>
+        {% for i in items %}
+            <h5>{{ i }}</h5>
+        {% endfor %}
+    <a href="/add">Click to add another item to the list.</a>
+{% endblock %}
