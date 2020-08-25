@@ -87,3 +87,64 @@ Coin flipping using variables 0 and 1: folder --> coinflip
 1. change random range to 0 to 1
 2. insert a condition where 0 = tails and 1 = heads (conditions are done in the html file)
 
+app.py
+
+@app.route("/")
+def home():
+    random_number = random.randint(0, 1)
+    return render_template("index.html", number=random_number )
+
+html 
+
+    <body>
+        {% if number == 1 %}
+            Your coin landed on HEADS!
+        {% elif number == 0 %}
+            Your coin landed on TAILS!
+        {% endif %}
+    </body>
+
+------------------------------------------------------------------------------------------
+
+Using forms inside Flask
+
+1. create a form tag inside the html
+2. create an action for the form --> in particular action="/routeName"
+3. create a dataName for each input field --> tag "name"
+3. create that route inside the application, give it access to get that data
+    - the syntax to access the data is ---> variableName = request.args.get("dataName")
+    - import request from Flask
+4. create a new html file that will take in the request from step 3
+5. inside the app.py file where we got the request from, and:
+    - return render_template("htmlFileName", name=variableName)
+
+app.py 
+
+    from flask import Flask, render_template, request
+
+    app = Flask(__name__)
+
+    @app.route("/")
+    def index():
+        return render_template("index.html")
+
+    @app.route("/submit_email")
+    def submit_email():
+        email = request.args.get("email")
+        return render_template("formcompleted.html", email=email)
+
+index.html
+
+        <form action="/submit_email">
+            <input name="email" type="text">
+            <input type="submit">
+        </form>
+
+formcompleted.html
+
+    <body>
+        <h1>The email address " {{ email }} " is successfully submitted.</h1>
+    </body>
+
+------------------------------------------------------------------------------------------
+
