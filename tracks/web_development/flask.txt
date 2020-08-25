@@ -148,3 +148,8 @@ formcompleted.html
 
 ------------------------------------------------------------------------------------------
 
+Using conditions to loop in another page: no_name.html
+
+1. create a condition statement to render a specific html
+2. Create the error message
+
