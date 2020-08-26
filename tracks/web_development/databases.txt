@@ -30,3 +30,27 @@ Example:
 
 list_item = request.form.get("task")
 session["list_of_tasks"].append(list_item)
+
+------------------------------------------------------------------------------------
+
+SQL + Flask + Sessions
+
+create a new folder (register)
+
+create a database file --> lecture.db 
+
+run "sqlite3 lecture.db"
+
+CREATE TABLE 'registrants' {
+    'id' INTEGER PRIMARY KEY,
+    'name' VARCHAR(255),
+    'email' VARCHAR(255)
+    };
+
+INSERT INTO registrants (name, email) VALUES ('Alice', 'alice@example.com');
+
+double check the data --> SELECT * FROM registrants;
+
+Create app.py
+    - import sqlite3
+    - db = 
