@@ -111,3 +111,4 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Notes | [Flask - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/flask.txt) | Python HTML CSS JavaScript | N/A |
 | Practice | [Flask - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/flask_practice) | Python HTML CSS JavaScript | N/A |
 | Notes | [Database Website - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/databases.txt) | Python SQL JavaScript HTML CSS | N/A |
+| Practice | [Database Website - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/database_practice) | Python SQL JavaScript HTML CSS | N/A |
