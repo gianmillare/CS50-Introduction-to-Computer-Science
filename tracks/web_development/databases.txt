@@ -102,3 +102,28 @@ Miscellaneous tips: What to do if someone did not fill a text box
 - create another html file to display a {{ message }}
 - inside app.py follow the code below:
 
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        name = request.form.get("name")
+        if not name:
+            return render_template("/apology.html", message="You must provide a name!")
+        email = request.form.get("email")
+        if not email:
+            return render_template("apology.html", message="You must provide an email address!")
+        c.execute("INSERT INTO registrants (name, email) VALUES (?,?)", (name, email))
+        conn.commit()
+        return redirect("/")
+
+- inside the {{message}} html file, input the below code:
+
+    <body>
+        <h1>My Apologies!</h1>
+        <div>
+            {{ message }}
+        </div>
+
+        <a href="/">Return</a>
+    </body>
