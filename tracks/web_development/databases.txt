@@ -51,6 +51,54 @@ INSERT INTO registrants (name, email) VALUES ('Alice', 'alice@example.com');
 
 double check the data --> SELECT * FROM registrants;
 
-Create app.py
+Create app.py and index.html while pulling database from SQL
     - import sqlite3
-    - db = 
+    - code the beginning of the flask app
+    - create a connection to the data base INSIDE the function used --> conn = sqlite3.connect('lecture.db')
+    - create the cursor to execute queries --> c = conn.cursor()
+    - make the app and its routes
+        - to execute queries --> rows = c.execute("SELECT * FROM registrants;")
+    - reference the database like the below:
+
+    <body>
+        <h1>Registrants</h1>
+        <ul>
+            {% for row in rows %}
+                <li>{{ row[1] }} ({{ row[2] }})</li>
+            {% endfor %}
+        </ul>
+    </body>
+
+
+Adding more registrants form the application
+- create a registration page html
+- add the function to add more data (register) into the app.py
+    create a form type in html to submit data like the below
+
+        <form action="/" method="POST">
+            <input type="text" name="name" placeholder="Input name here">
+            <input type="text" name="email" placeholder="Input email address here">
+            <input type="submit">
+        </form>
+
+    import request into the app.py
+
+    create the function using methods POST and GET in app.py, like the below
+        --> remember to execute a SQL query here to add in the new data
+
+@app.route("/register", methods=["GET", "POST"])
+def register():
+    if request.method == "GET":
+        return render_template("register.html")
+    else:
+        name = request.form.get("name")
+        email = request.form.get("email")
+        c.execute("INSERT INTO registrants (name, email) VALUES (?,?)", (name, email))
+        conn.commit()
+        return redirect("/")
+
+
+Miscellaneous tips: What to do if someone did not fill a text box
+- create another html file to display a {{ message }}
+- inside app.py follow the code below:
+
