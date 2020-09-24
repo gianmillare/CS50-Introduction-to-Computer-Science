@@ -1,0 +1,18 @@
+Create a main.lua file
+
+// Set the window size as a constant
+WINDOW_WIDTH = 1280
+WINDOW_HEIGHT = 720
+
+// Create a table as Lua operates in tables
+function love.load()
+    love.window.setMode(WINDOW_HEIGHT, WINDOW_WIDTH {
+        fullscreen = false,
+        vsync = true,
+        resizable = false
+    })
+end
+
+function love.draw()
+    love.graphics.printf("Hello Pong", 0, WINDOW_HEIGHT / 2 - 6, WINDOW_WIDTH, 'center')
+end
