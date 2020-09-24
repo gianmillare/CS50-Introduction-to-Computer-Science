@@ -113,3 +113,4 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Notes | [Database Website - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/databases.txt) | Python SQL JavaScript HTML CSS | N/A |
 | Practice | [Database Website - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/database_practice) | Python SQL JavaScript HTML CSS | N/A |
 | Assignment | [Web - Finance](https://github.com/gianmillare/Web-Finance) | Python SQL JavaScript HTML CSS APIKey | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/results/submit50_finance) |
+| Notes | [Pong - Lua and LOVE](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/game_development/pong) | Lua LOVE | N/A |
