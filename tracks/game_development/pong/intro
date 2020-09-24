@@ -1,7 +1,0 @@
-Open vscode and create a main.lua file
-
-test the file using the below code:
-
-function love.draw()
-    love.graphics.print("Hello World!)
-end
