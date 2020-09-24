@@ -107,8 +107,9 @@ After graduating from UC Berkeley's Data Analytics Program, I started looking fo
 | Practice | [CSS - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/css_practice) | CSS | N/A |
 | Notes | [JavaScript - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/javascript.txt) | JavaScript | N/A | 
 | Practice | [JavaScript - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/javascript_practice) | JavaScript | N/A |
-| Assignment | [Web - Homepage](https://github.com/gianmillare/Web-Homepage) | HTML, CCS, JavaScript | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/results/submit50_homepage) |
+| Assignment | [Web - Homepage](https://github.com/gianmillare/Web-Homepage) | HTML, CSS, JavaScript | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/results/submit50_homepage) |
 | Notes | [Flask - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/flask.txt) | Python HTML CSS JavaScript | N/A |
 | Practice | [Flask - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/flask_practice) | Python HTML CSS JavaScript | N/A |
 | Notes | [Database Website - Notes](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/blob/master/tracks/web_development/databases.txt) | Python SQL JavaScript HTML CSS | N/A |
 | Practice | [Database Website - Practice](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/web_development/database_practice) | Python SQL JavaScript HTML CSS | N/A |
+| Assignment | [Web - Finance](https://github.com/gianmillare/Web-Finance) | Python, SQL, JavaScript, HTML, CSS, APIKey | [Submission Results](https://github.com/gianmillare/CS50-Introduction-to-Computer-Science/tree/master/tracks/results/submit50_finance) |
